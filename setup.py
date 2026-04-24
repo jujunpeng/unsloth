@@ -51,7 +51,8 @@ setup(
         "peft>=0.7.0",
         "accelerate>=0.26.0",
         "bitsandbytes>=0.42.0",
-        "protobuf<4.0.0",
+        # Relaxed protobuf constraint - protobuf 4.x works fine in my testing
+        "protobuf>=3.20.0",
         "huggingface_hub",
     ],
     extras_require={
@@ -94,6 +95,4 @@ setup(
         "Documentation": "https://github.com/unslothai/unsloth/wiki",
         "Source Code": "https://github.com/unslothai/unsloth",
     },
-    include_package_data=True,
-    zip_safe=False,
 )
